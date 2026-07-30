@@ -180,8 +180,12 @@ def run_sft_training(trainer):
     output = trainer.train()
     return float(output.training_loss)
 
-# Step 18 - switch_to_inference_mode (not yet solved)
-# TODO: implement
+# Step 18 - switch_to_inference_mode
+from unsloth import FastLanguageModel
+def switch_to_inference_mode(model):
+    """Switch the LoRA-tuned model into Unsloth's fast inference mode and return it."""
+    # TODO: call the Unsloth helper that prepares the model for fast generation
+    return FastLanguageModel.for_inference(model)
 
 # Step 19 - build_chat_prompt (not yet solved)
 # TODO: implement
